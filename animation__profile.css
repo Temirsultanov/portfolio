@@ -1,0 +1,272 @@
+.profile__picture{
+    position: relative;
+}
+/* Rectangles */
+
+.rect1{
+    animation-name: rect1;
+}
+@keyframes rect1{
+    0%{
+        width: 0;
+    }
+    14%{
+        width: 68px;
+    }
+    100%{
+        width: 68px;
+    }
+}
+.rect2{
+    animation-name: rect2;
+}
+@keyframes rect2{
+    14%{
+        width: 0;
+    }
+    27%{
+        width: 64px;
+    }
+    100%{
+        width: 68px;
+    }
+}
+.rect3{
+    animation-name: rect3;
+}
+@keyframes rect3{
+    27%{
+        width: 0;
+    }
+    41%{
+        width: 57px;
+    }
+    100%{
+        width: 57px;
+    }
+}
+.rect4{
+    animation-name: rect4;
+}
+@keyframes rect4{
+    41%{
+        width: 0;
+    }
+    56%{
+        width: 66px;
+    }
+    100%{
+        width: 66px;
+    }
+}
+.rect5{
+    animation-name: rect5;
+}
+@keyframes rect5{
+    56%{
+        width: 0;
+    }
+    70%{
+        width: 62px;
+    }
+    100%{
+        width: 62px;
+    }
+}
+.rect6{
+    animation-name: rect6;
+}
+@keyframes rect6{
+    70%{
+        width: 0;
+    }
+    83%{
+        width: 68px;
+    }
+    100%{
+        width: 68px;
+    }
+}
+.rect7{
+    animation-name: rect7;
+}
+@keyframes rect7{
+    83%{
+        width: 0;
+    }
+    97%{
+        width: 65px;
+    }
+    100%{
+        width: 65px;
+    }
+}
+.rect1, .rect2, .rect3, .rect4, .rect5, .rect6, .rect7{
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    width: 0;
+}
+
+/* Hands */
+.notebook{
+    position: absolute;
+    bottom: 53px;
+    transform: translateX(-33px);
+}
+.right__hand{
+    position: absolute;
+    bottom: 54px;
+    transform: translateX(-70px);
+    animation-name: right__hand;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+    animation-delay: 0.5s;
+}
+@keyframes right__hand {
+    50%{
+        transform: translateX(-70px) rotate(-10deg);
+    }
+    100%{
+        transform: translateX(-70px) rotate(0deg);
+    }
+}
+.right__hand__tshirt{
+    position: absolute;
+    transform: translateX(-33px);
+    transform-origin: 0 0;
+}
+.left__hand{
+    position: absolute;
+    bottom: 87px;
+    transform: translateX(-47px);
+
+}
+.left__hand{
+    animation-name: left__hand;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+    animation-delay: 0.5s;
+    transform-origin: 0 0;
+}
+@keyframes left__hand {
+    60%{
+        transform: translateX(-47px) rotate(5deg);
+    }
+    100%{
+        transform: translateX(-47px) rotate(0deg);
+    }
+}
+.left__hand__tshirt{
+    animation-name: left__hand__tshirt;
+}
+
+/* Eyes */
+.right__eye, .left__eye{
+    animation-name: eyes;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes eyes{
+    0%{
+        transform: translate(0, 0);
+    }
+    10%{
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-2px, 0);
+    }
+    22%{
+        transform: translate(-2px, 0);
+    }
+    32%{
+        transform: translate(2px, 0);
+    }
+    34%{
+        transform: translate(2px, 0);
+    }
+    44%{
+        transform: translate(0px, 2px);
+    }
+    90%{
+        transform: translate(0px, 2px);
+    }
+}
+
+/* Legs */
+
+.left__leg{
+    position: absolute;
+    bottom: 15px;
+    transform: translateX(-28px) rotate(4deg);
+    transform-origin: 0 0;
+
+    animation-name: left__leg;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes left__leg{
+    0%{
+        transform: translateX(-28px) rotate(4deg);
+    }
+    50%{
+        transform: translateX(-28px) rotate(-4deg);
+    }
+    100%{
+        transform: translateX(-28px) rotate(4deg);
+    }
+}
+.right__leg{
+    position: absolute;
+    bottom: 13px;
+    transform: translateX(-42px) rotate(-4deg);
+    transform-origin: 0 0;
+
+    animation-name: right__leg;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes right__leg{
+    0%{
+        transform: translateX(-42px) rotate(-4deg);
+    }
+    50%{
+        transform: translateX(-42px) rotate(4deg);
+    }
+    100%{
+        transform: translateX(-42px) rotate(-4deg);
+    }
+}
+body{
+    height: 100vh;
+}
+.animate{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 234px;
+    height: 238px;
+    transform: translate(-50%, -50%);
+}
+.title404{
+    position: absolute;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

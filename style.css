@@ -1,0 +1,403 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    --black: #000;
+    --white: #fff;
+    --grey: #7a7a7a;
+    --containerWidth: 1200px;
+    --marginX : 0;
+    --sectionPaddingY: 60px;
+    --sectionPaddingX: calc((100vw - 1200px) / 2);
+    --headerHeight: 100px;
+    --borderRadius: 15px;
+    --border: 1px solid var(--black);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+}
+.h1{
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 140%;
+}
+.h2{
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+.h3{
+    font-weight: 400;
+    font-size: 40px;
+}
+.h4{
+    font-weight: 400;
+    font-size: 30px;   
+    line-height: 140%;
+}
+.h5{
+    font-weight: 400;
+    font-size: 25px;
+}
+.h6{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Header */
+.portfolio__header{
+    height: var(--headerHeight);
+    border-bottom: 1px solid var(--grey); 
+    padding-left: var(--sectionPaddingX);
+    padding-right: var(--sectionPaddingX);
+    background-color: var(--white);
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.header__nav ul{
+    display: flex;
+}
+.header__nav ul li:not(:first-child) {
+    margin-left: 70px;
+}
+
+/* Main */
+/*     Mainscreen */
+.section__mainscreen{
+    padding-bottom: var(--sectionPaddingY);
+    padding-left: var(--sectionPaddingX);
+    padding-right: var(--sectionPaddingX);
+    width: 100%;
+    margin-top: calc(120px + var(--headerHeight));
+    display: grid;
+    grid-template-columns: 520px auto-fill;
+    column-gap: 150px;
+    grid-template-rows: 190px 55px;
+    row-gap: 45px;
+    grid-template-areas: 
+    "title photo"
+    "subtitle photo";
+    margin-bottom: 120px;
+}
+.mainscreen__title{
+    grid-area: title;
+}
+.mainscreen__subtitle{
+    grid-area: subtitle;
+}
+.mainscreen__photo{
+    grid-area: photo; 
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: var(--borderRadius);
+}
+
+/*     Works */
+.section__works{
+    padding-top: var(--sectionPaddingY);
+    padding-bottom: var(--sectionPaddingY);
+    padding-left: var(--sectionPaddingX);
+    padding-right: var(--sectionPaddingX);
+    width: 100%;
+}
+.works{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, calc((100vw - 2 * var(--sectionPaddingX) - 60px) / 3));
+    grid-template-areas: 
+    "prytek prytek reshutest"
+    "towtrucks aksakal reshutest"
+    "towtrucks rodniegoroda rodniegoroda"
+    "imena imena dispatchlt";
+    gap: 30px;
+}
+.work{
+    overflow: hidden;
+}
+.work a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work-prytek{
+    grid-area: prytek;
+}
+.work-reshutest{
+    grid-area: reshutest;
+}
+.work-reshutest img{
+    transform: rotate(-90deg);
+}
+.work-towtrucks{
+    grid-area: towtrucks;
+}
+.work-towtrucks img{
+    transform: rotate(-90deg);
+}
+.work-aksakal{
+    grid-area: aksakal;
+}
+.work-imena{
+    grid-area: imena;
+}
+.work-dispatchlt{
+    grid-area: dispatchlt;
+}
+.work-rodniegoroda{
+    grid-area: rodniegoroda;
+}
+.work{
+    border: var(--border);
+    border-radius: var(--borderRadius);
+}
+
+/*     Contacts */
+.section__contacts{
+    padding-top: var(--sectionPaddingY);
+    padding-bottom: var(--sectionPaddingY);   
+    padding-left: var(--sectionPaddingX);
+    padding-right: var(--sectionPaddingX);
+    width: 100%;
+}
+.contact:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.portfolio__footer{
+    padding-top: var(--sectionPaddingY);
+    padding-bottom: var(--sectionPaddingY);
+    padding-left: var(--sectionPaddingX);
+    padding-right: var(--sectionPaddingX);
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-areas: 
+    "title nav"
+    "copyright nav";
+}
+.footer__title{
+    grid-area: title;
+    align-self: start;
+}
+.footer__copyright{
+    grid-area: copyright;
+    align-self: end;
+}
+.footer__nav{
+    grid-area: nav;
+}
+.footer__nav ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer__nav .h6{
+    text-align: right;
+}
+/* Media */
+@media (max-width: 1300px) {
+    body{
+        --sectionPaddingX: 100px;
+    }
+}
+@media (max-width: 1150px) {
+    body{
+        --sectionPaddingX: calc((100vw - 790px) / 2);
+    }
+    .h1{
+        font-size: 60px;
+    }
+    .h2{
+        font-size: 60px;
+    }
+    .h3{
+        font-size: 40px;   
+    }
+    /* Main */
+    /*     Mainscreen */
+    .section__mainscreen{
+        margin-top: calc(100px + var(--headerHeight));
+        column-gap: 100px;
+    }
+
+    /* Works */
+    .works{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 366px 366px 366px 366px 366px 366px;
+        grid-template-areas: 
+        "prytek prytek"
+        "towtrucks aksakal"
+        "towtrucks reshutest"
+        "imena reshutest"
+        "imena dispatchlt"
+        "rodniegoroda rodniegoroda";
+    }
+    .work-imena img{
+        transform: rotate(-90deg);
+    }
+
+}
+@media (max-width: 990px) {
+    body{
+        --sectionPaddingX: 80px;
+    }
+    .h1{
+        font-size: 50px;
+    }
+    .h2{
+        font-size: 50px;
+    }
+    .h3{
+        font-size: 30px;
+    }
+    /* Main */
+    .section__mainscreen{
+        column-gap: 50px;
+        grid-template-columns: 360px auto-fill;
+        row-gap: 20px;
+        grid-template-rows: 140px 36px;
+    }
+    /*     Works */
+    .works{
+        grid-template-rows: repeat(6, calc((100vw - 2 * var(--sectionPaddingX) - 30px) / 2));
+    }
+}
+@media (max-width: 760px) {
+    body{
+        --sectionPaddingX: calc((100vw - 380px) / 2);
+    }
+    .h1{
+        font-size: 40px;
+    }
+    .h2{
+        font-size: 40px;
+    }
+    .h3{
+        font-size: 20px;   
+    }
+    .h4{
+        font-size: 25px;
+    }
+    .h5{
+        font-size: 20px;
+    }
+
+    /* Header */
+    .header__nav ul li:not(:first-child) {
+        margin-left: 25px;
+    }
+
+    /* Main */
+    /*     Mainscreen */
+    .section__mainscreen{
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        grid-template-rows: auto auto auto;
+        row-gap: 15px;
+        margin-top: calc(60px + var(--headerHeight));
+        grid-template-areas: 
+        "title"
+        "subtitle"
+        "photo";
+        margin-bottom: 0px;
+    }
+    .mainscreen__photo{
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    /* Works */
+    .works{
+        grid-template-columns: 1fr;
+        grid-template-rows: 366px 366px 366px 366px 366px 366px 366px;
+        grid-template-areas: 
+        "prytek"
+        "aksakal"
+        "towtrucks"
+        " reshutest"
+        "imena"
+        "rodniegoroda"
+        "dispatchlt";
+    }
+    .work img{
+        max-width: calc(100% - 60px)
+    }
+    .work-towtrucks img{
+        transform: rotate(0deg);
+    }
+    .work-reshutest img{
+        transform: rotate(0deg);
+    }
+    .work-imena img{
+        transform: rotate(0deg);
+    }
+
+    /* Contacts */
+    .contact a{
+        display: block;
+        margin-top: 10px;
+    }
+
+    /* Footer */
+    .portfolio__footer{
+        grid-template-areas: 
+        "title"
+        "nav"
+        "copyright";
+        gap: 20px;
+    }
+    .footer__nav .h6{
+        text-align: left;
+    }
+}
+@media (max-width: 440px) {
+    body{
+        --sectionPaddingX: 30px;
+    }
+    /* Main */
+    /*     Works */
+    .works{
+        grid-template-rows: repeat(7, calc(100vw - 2 * var(--sectionPaddingX)));
+    }
+}
+@media (max-width: 360px) {
+    body{
+        --sectionPaddingX: 15px;
+    }
+    .h1{
+        font-size: 36px;
+    }
+    .h2{
+        font-size: 36px;
+    }
+}
