@@ -436,8 +436,8 @@ a:hover{
     --black: #fff;
     --white: #000;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 @keyframes destroy__photo {

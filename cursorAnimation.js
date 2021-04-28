@@ -4,6 +4,8 @@
     let worksCursor = document.querySelector('.works__cursor');
     worksCursor.style.height = worksTitle.getBoundingClientRect().height + 'px';
     worksTitle.style.opacity = 0;
+    worksTitle.style.height = worksTitle.getBoundingClientRect().height + 'px';
+    worksTitle.textContent = '';
     worksCursor.style.transform = 'translateX(0px)';
     let workSymbols = ['Р', 'а', 'б', 'о', 'т', 'ы'];
 
@@ -12,6 +14,8 @@
     let contactsCursor = document.querySelector('.contacts__cursor');
     contactsCursor.style.height = contactsTitle.getBoundingClientRect().height + 'px';
     contactsTitle.style.opacity = 0;
+    contactsTitle.style.height = contactsTitle.getBoundingClientRect().height + 'px';
+    contactsTitle.textContent = '';
     contactsCursor.style.transform = 'translateX(0px)';
     let contactSymbols = ['К', 'о', 'н', 'т', 'а', 'к', 'т', 'ы'];
 
