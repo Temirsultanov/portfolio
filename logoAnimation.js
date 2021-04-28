@@ -10,7 +10,7 @@ let changeLogo = function () {
         let randomNumber = getRandom(symbolsArray.length);
         logo.textContent += symbolsArray[randomNumber];
     }
-    if (logo.textContent.includes('mu') || logo.textContent.includes('muh@')) {
+    if (logo.textContent.includes('muha') || logo.textContent.includes('muh@')) {
         let str = logo.textContent;
         setTimeout(() => {
             logo.textContent = str;
