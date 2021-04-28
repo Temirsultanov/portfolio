@@ -251,11 +251,11 @@ body{
     height: 100vh;
 }
 .animate{
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 50%;
+    bottom: 0vh;
     left: 50%;
     width: 234px;
     height: 238px;
@@ -266,7 +266,15 @@ body{
     font-size: 30px;
     font-style: italic;
     font-weight: 900;
-    top: 70%;
+    bottom: 0vh;
     left: 50%;
+    width: 350px;
+    text-align: center;
     transform: translate(-50%, -50%);
+}
+@media (max-width: 600px) {
+    .title404{
+        font-size:23px;
+        width: 280px;
+    }
 }

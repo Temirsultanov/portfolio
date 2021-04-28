@@ -18,6 +18,10 @@ body{
     color: var(--black);
     background-color: var(--white);
 }
+.black{
+    --black: #fff;
+    --white: #000;
+}
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
@@ -41,8 +45,9 @@ a:hover{
 }
 .h2{
     font-weight: 700;
-    font-size: 45px;
+    font-size: 68px;
     margin-bottom: 40px;
+    align-self: flex-start;
 }
 .h3{
     font-weight: 400;
@@ -126,6 +131,9 @@ a:hover{
     padding-left: var(--sectionPaddingX);
     padding-right: var(--sectionPaddingX);
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .works{
     display: grid;
@@ -140,6 +148,7 @@ a:hover{
 }
 .work{
     overflow: hidden;
+    background-color: white;
 }
 .work a{
     width: 100%;
@@ -179,6 +188,28 @@ a:hover{
     border: var(--border);
     border-radius: var(--borderRadius);
 }
+.cursor{
+    width: 3px;
+    height: 57px;
+    background-color: var(--black);
+    position: absolute;
+    top: 60px;
+    animation-name: cursor;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes cursor {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 /*     Contacts */
 .section__contacts{
@@ -187,6 +218,9 @@ a:hover{
     padding-left: var(--sectionPaddingX);
     padding-right: var(--sectionPaddingX);
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .contact:not(:last-child) {
     margin-bottom: 30px;
