@@ -190,6 +190,7 @@ a:hover{
     background-color: var(--black);
     position: absolute;
     top: 60px;
+    left: var(--sectionPaddingX);
     animation-name: cursor;
     animation-duration: 0.7s;
     animation-iteration-count: infinite;
@@ -435,9 +436,9 @@ a:hover{
 .destroy{
     --black: #fff;
     --white: #000;
-    overflow: hidden;
+    overflow-x: hidden;
     max-width: 100vw;
-    max-height: 100vh;
+    /* max-height: 100vh; */
 }
 
 @keyframes destroy__photo {
