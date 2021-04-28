@@ -15,6 +15,7 @@ let changeLogo = function () {
         setTimeout(() => {
             logo.textContent = str;
         }, 500);
+        document.body.style.height = document.body.getBoundingClientRect().height + 'px';
         document.body.classList.add('destroy');
         window.removeEventListener('scroll', onWindowScroll)
         destroying.forEach(title => {
