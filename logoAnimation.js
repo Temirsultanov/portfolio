@@ -1,4 +1,5 @@
 let symbolsArray = ['m', 'u', 'h', 'a', '%', '#', '@', '?', '!','~', '$', '&'];
+let destroying = document.querySelectorAll('.work, .mainscreen__photo, h1,h2,h3,h4,h5,h6, .cursor, .portfolio__footer');
 let logo = document.querySelector('.logo b');
 let getRandom = function (maxValue) {
     return Math.floor( Math.random() * maxValue );
@@ -14,8 +15,14 @@ let changeLogo = function () {
         setTimeout(() => {
             logo.textContent = str;
         }, 500);
-        document.body.classList.add('black');
+        document.body.classList.add('destroy');
         window.removeEventListener('scroll', onWindowScroll)
+        destroying.forEach(title => {
+            let randomDeg = getRandom(360);
+            title.position = 'absolute';
+            title.style.transition = 'transform 5s ease-in, color 0s';
+            title.style.transform = `translateY(5000px) rotate(${randomDeg}deg)`
+        });
     }
 };
 let onWindowScroll = function () {
