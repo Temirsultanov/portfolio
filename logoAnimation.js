@@ -15,7 +15,9 @@ let changeLogo = function () {
         setTimeout(() => {
             logo.textContent = str;
         }, 500);
-        document.body.style.height = '0px';
+        setTimeout(() => {
+            document.querySelector('.portfolio__main').style.display = 'none';
+        }, 5000);
         document.body.classList.add('destroy');
         window.removeEventListener('scroll', onWindowScroll)
         destroying.forEach(title => {
